@@ -8,13 +8,17 @@
         <style></style>
     </head>
     <body>
+        <button onclick="colorchange(0);">0</button>
+        <button onclick="colorchange(1);">1</button>
+        <button onclick="colorchange(2);">2</button>
         <script src="https://pixijs.download/release/pixi.js"></script>
         <script>
             let app = new PIXI.Application({ width: 900, height: 500 });
             document.body.appendChild(app.view);
             const aliens = [];
 
-            const totalDudes = 20;
+            const totalDudes = 10;
+            const colors = [0xffcccc, 0xccffcc, 0xccccff]; 
 
             for (let i = 0; i < totalDudes; i++) {
                 // create a new Sprite that uses the image name that we just generated as its source
@@ -27,33 +31,20 @@
                 dude.scale.set(0.7);
 
                 // finally lets set the dude to be at a random position..
-                dude.x = Math.random() * app.screen.width;
-                dude.y = Math.random() * app.screen.height;
+                dude.x = 100;
+                dude.y = 100;
 
-                dude.tint = 0xffcccc;
-
-                // create some extra properties that will control movement :
-                // create a random direction in radians. This is a number between 0 and PI*2 which is the equivalent of 0 - 360 degrees
-                //dude.direction = Math.random() * Math.PI * 2;
-
-                // this number will be used to modify the direction of the dude over time
-                //dude.turningSpeed = Math.random() - 0.8;
-
-                // create a random speed for the dude between 2 - 4
-                //dude.speed = 2 + Math.random() * 2;
+                dude.tint = colors[i];
 
                 // finally we push the dude into the aliens array so it it can be easily accessed later
                 aliens.push(dude);
             }
-            app.stage.addChild(aliens[1]);
-            // let sprite = PIXI.Sprite.from("wind.svg");
-            // sprite.tint = 0xFFFFFF;
-            // app.stage.addChild(sprite);
-            // var maskGraphic = new PIXI.Graphics();
-
-            // sprite.mask = maskGraphic; // 設定用 maskGraphic 物件來當兔子的遮罩
-
-            // //sprite.mask = null; // 不使用遮罩的時候設定 null
+            function colorchange(a){
+                app.stage.addChild(aliens[a]);
+            };
+            // app.stage.addChild(aliens[0]);
+            // app.stage.addChild(aliens[1]);
+            // app.stage.addChild(aliens[2]);
         </script>
     </body>
 </html>
