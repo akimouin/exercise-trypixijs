@@ -8,40 +8,55 @@
         <style></style>
     </head>
     <body>
-        <button onclick="colorchange(0);">0</button>
-        <button onclick="colorchange(1);">1</button>
-        <button onclick="colorchange(2);">2</button>
+        <br>
+        <button onclick="colorchange(0, 0);">color0</button>
+        <button onclick="colorchange(0, 1);">color1</button>
+        <button onclick="colorchange(0, 2);">color2</button>
+        <br>
+        <button onclick="svgChange(0);">svg0</button>
+        <button onclick="svgChange(1);">svg1</button>
         <script src="https://pixijs.download/release/pixi.js"></script>
         <script>
             let app = new PIXI.Application({ width: 900, height: 500 });
             document.body.appendChild(app.view);
-            const aliens = [];
+            const svgs = ["wind.svg", "circle.svg"];
+            const items=[];
 
             const totalDudes = 10;
-            const colors = [0xffcccc, 0xccffcc, 0xccccff]; 
+            const colors = [0xffcccc, 0xccffcc, 0xccccff];
 
-            for (let i = 0; i < totalDudes; i++) {
-                // create a new Sprite that uses the image name that we just generated as its source
-                const dude = PIXI.Sprite.from("wind.svg");
+            // create a new Sprite that uses the image name that we just generated as its source
+            for(let i=0; i<2; i++){
 
-                // set the anchor point so the texture is centered on the sprite
-                dude.anchor.set(0.5);
+            
+            let dude = PIXI.Sprite.from(svgs[i]);
 
-                // set a random scale for the dude - no point them all being the same size!
-                dude.scale.set(0.7);
+            // set the anchor point so the texture is centered on the sprite
+            dude.anchor.set(0.5);
 
-                // finally lets set the dude to be at a random position..
-                dude.x = 100;
-                dude.y = 100;
+            // set a random scale for the dude - no point them all being the same size!
+            dude.scale.set(0.7);
 
-                dude.tint = colors[i];
+            // finally lets set the dude to be at a random position..
+            dude.x = 100;
+            dude.y = 100;
 
-                // finally we push the dude into the aliens array so it it can be easily accessed later
-                aliens.push(dude);
-            }
-            function colorchange(a){
-                app.stage.addChild(aliens[a]);
+            items.push(dude);
+        }
+
+            //app.stage.addChild(dude);
+
+            // finally we push the dude into the aliens array so it it can be easily accessed later
+            //aliens.push(dude);
+            //待解決: 移除上一個選擇的物件,更改物件後可以連動改變顏色
+            let svgChange = (a) => {
+                app.stage.removeChild(items[0]);
+                app.stage.addChild(items[a]);
             };
+            function colorchange(a, b) {
+                items[a].tint = colors[b];
+                //app.stage.addChild(aliens[a]);
+            }
             // app.stage.addChild(aliens[0]);
             // app.stage.addChild(aliens[1]);
             // app.stage.addChild(aliens[2]);
