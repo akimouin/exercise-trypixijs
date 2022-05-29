@@ -8,20 +8,15 @@
         <style></style>
     </head>
     <body>
-        <br />
-        <button onclick="colorchange(0, 0);">color0</button>
-        <button onclick="colorchange(0, 1);">color1</button>
-        <button onclick="colorchange(0, 2);">color2</button>
-        <br />
-        <button onclick="svgChange(0);">svg0</button>
-        <button onclick="svgChange(1);">svg1</button>
+        <div class="svgbtn"></div>
+        <div class="colorbtn">
+        </div>
         <script src="https://pixijs.download/release/pixi.js"></script>
         <script>
             let app = new PIXI.Application({ width: 900, height: 500 });
             document.body.appendChild(app.view);
             const svgs = ["wind.svg", "circle.svg"];
             const items = [];
-
             const colors = [0xffcccc, 0xccffcc, 0xccccff];
 
             for (let i = 0; i < 2; i++) {
@@ -44,14 +39,57 @@
             app.stage.addChild(items[0]);
 
             //待解決: 更改物件後可以連動改變顏色
+            const svgbtn = document.querySelector(".svgbtn");
+            const colorbtn = document.querySelector(".colorbtn");
+
+            for (let x = 0; x < svgs.length; x++) {
+                const btn1 = document.createElement("button");
+                btn1.className = "btn1";
+                btn1.innerText = "svg" + x;
+                btn1.addEventListener(
+                    "click",
+                    function () {
+                        svgChange(x);
+                    },
+                    false
+                );
+                btn1.addEventListener(
+                    "click",
+                    function () {
+                        colorbtns(x);
+                    },
+                    false
+                );
+                svgbtn.appendChild(btn1);
+            }
+
             const svgChange = (a) => {
-                for (let i=0;i < 2; i++){
-                app.stage.removeChild(items[i]);}
+                for (let i = 0; i < svgs.length; i++) {
+                    app.stage.removeChild(items[i]);
+                }
                 app.stage.addChild(items[a]);
             };
             function colorchange(a, b) {
                 items[a].tint = colors[b];
             }
+            //待解決問題:如何刪掉重複的按鈕
+            const colorbtns = (a) => {
+                //colorbtn.removeChild(btn2);
+                for (let y = 0; y < colors.length; y++) {
+                    const btn2 = document.createElement("button");
+                    btn2.className = "btn2";
+                    btn2.id="btn2"+ a + "-" + y;
+                    btn2.innerText = "color" + a + "-" + y;
+                    btn2.addEventListener(
+                        "click",
+                        function () {
+                            colorchange(a, y);
+                        },
+                        false
+                    );
+                    colorbtn.appendChild(btn2);
+                }
+            };
         </script>
     </body>
 </html>
