@@ -9,8 +9,7 @@
     </head>
     <body>
         <div class="svgbtn"></div>
-        <div class="colorbtn">
-        </div>
+        <div class="colorbtn"> </div>
         <script src="https://pixijs.download/release/pixi.js"></script>
         <script>
             let app = new PIXI.Application({ width: 900, height: 500 });
@@ -72,22 +71,35 @@
             function colorchange(a, b) {
                 items[a].tint = colors[b];
             }
-            //待解決問題:如何刪掉重複的按鈕
+
+            for (let y = 0; y < colors.length; y++) {
+                const btn2 = document.createElement("button");
+                btn2.className = "btn2";
+                btn2.id = "btn2" + y;
+                btn2.innerText = "color" + y;
+                colorbtn.appendChild(btn2);
+            }
+            const btn2s = document.querySelectorAll('.btn2');
+            console.log(btn2s);
             const colorbtns = (a) => {
                 //colorbtn.removeChild(btn2);
                 for (let y = 0; y < colors.length; y++) {
-                    const btn2 = document.createElement("button");
-                    btn2.className = "btn2";
-                    btn2.id="btn2"+ a + "-" + y;
-                    btn2.innerText = "color" + a + "-" + y;
-                    btn2.addEventListener(
+                    for (let c = 0; c < svgs.length; c++) {
+                        btn2s[c].removeEventListener(
+                            "click",
+                            function () {
+                                colorchange(c, y);
+                            },
+                            false
+                        );
+                    }
+                    btn2s[y].addEventListener(
                         "click",
                         function () {
                             colorchange(a, y);
                         },
                         false
                     );
-                    colorbtn.appendChild(btn2);
                 }
             };
         </script>
