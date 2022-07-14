@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>試切</title>
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body{
+                height: 100vh;
+                background-color: #3C3B67;
+                color: white;
+            }
+            nav {
+                height: 120px;
+                
+            }
+            .avatar_generator{
+                width: 1200px;
+                height: 610px;
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 16px;
+                position: relative;
+            }
+            .basic_part{
+                width: 375px;
+                height: 100%;
+                flex: 0 0 auto;
+                padding-left: 60px;
+                padding-right: 0;
+                padding-top: 110px;
+            }
+            .center_part{
+                width: 450px;
+                height: 100%;
+                flex: 0 0 auto;
+                padding: 50px 0 0 0;
+            }
+            .body_part{
+                width: 375px;
+                height: 100%;
+                flex: 0 0 auto;
+                padding-left: 60px;
+                padding-right: 40px;
+                padding-top: 70px;
+            }
+            .btns{
+                padding-top: 5px;
+            }
+            .circle {
+                width: 50px;
+                height: 50px;
+                background-color: #ccc;
+                border-radius: 50%;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+            .styling i {
+                font-size: 50px;
+            }
+            .line{
+                background-color: #fff;
+                position: absolute;
+            }
+            .line:nth-child(1) {
+                height: 2px;
+                width: 90px;
+                transform: translateX(-90px) translateY(16px);
+            }
+            .line:nth-child(2) {
+                height: 200px;
+                width: 2px;
+                transform: translateX(-90px) translateY(16px);
+            }
+            .line:nth-child(3) {
+                height: 2px;
+                width: 250px;
+                transform: translateX(-340px) translateY(215px);
+            }
+
+            .info div{
+                color: #fff;
+                background-color: transparent;
+                border: #fff 1px solid;
+                padding: 10px 40px;
+                border-radius: 20px;
+                margin-left: 20px;
+            }
+
+            .styling{
+                height: 180px;
+            }
+            .hint_text{
+                padding-top: 20px;
+                color: #FF52BA;
+            }
+            .color .circle{
+                width: 40px;
+                height: 40px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .size_btn{
+                height: 20px;
+                width: 90px;
+                border: 1px solid #D259DD;
+            }
+            .active{
+                background-color: #FFE9F6;
+            }
+            .basic_contorl{
+                padding-bottom: 30px;
+            }
+            .avatar_title{
+                padding-top: 50px;
+                padding-left: 60px;
+                position: absolute;
+            }
+            .avatar_title h2 {
+                margin: 0;
+            }
+            .avatar_title p {
+                padding-left: 5px;
+                margin: 0;
+                vertical-align: bottom;
+            }
+            .back{
+                width: 50px;
+                position: absolute;
+                left: 1145px;
+                top: 10px;
+            }
+            .back i{
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav><h1>navbar</h1></nav>
+        <div class="container-fluid"
+            ><div class="row avatar_generator m-auto">
+                <div class="title avatar_title d-flex flex-wrap align-items-end"><h2>投生形象1</h2><p class="created_time">建立時間：20220616/Thr/08:12:23</p></div>
+                <div class="back"><i class="fa-solid fa-xmark"></i></div>
+                <div class="basic_part">
+                    <div class="basic_contorl">
+                        <h4>體型</h4>
+                        <div class="btns d-flex flex-wrap justify-content-center">
+                            <div class="size_btn active"></div>
+                            <div class="size_btn"></div>
+                            <div class="size_btn"></div>
+                        </div>
+                    </div>
+                    <div class="basic_contorl">
+                        <h4>手臂</h4>
+                        <div class="btns d-flex flex-wrap justify-content-center">
+                            <div class="size_btn active"></div>
+                            <div class="size_btn"></div>
+                            <div class="size_btn"></div>
+                        </div>
+                    </div>
+                    <div class="basic_contorl">
+                        <h4>腿</h4>
+                        <div class="btns d-flex flex-wrap justify-content-center">
+                            <div class="size_btn active"></div>
+                            <div class="size_btn"></div>
+                            <div class="size_btn"></div>
+                        </div>
+                    </div>
+                    <div class="color basic_contorl">
+                        <h4>顏色</h4>
+                        <div class="btns d-flex flex-wrap">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center_part">
+                    <div class="pic text-center mb-4">
+                        <img src="./sample.png" alt="" width="450" />
+                    </div>
+                    <div class="info d-flex justify-content-center">
+                        <div><i class="fa-solid fa-floppy-disk"></i> 儲存</div> <div><i class="fa-solid fa-dice"></i> 隨機</div>
+                    </div>
+                </div>
+                <div class="body_part">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <h4>手<i class="fa-solid fa-dice"></i></h4>
+                    <div class="controlarea" id="controlareaEyes">
+                        <div class="styling">
+                            <h5>款式</h5>
+                            <div class="btns d-flex justify-content-center">
+                                <div><i class="fa-solid fa-angle-left"></i></div>
+                                <div class="circle"></div>
+                                <div><i class="fa-solid fa-angle-right"></i></div>
+                                
+                            </div>
+                            <div class="text-center">300</div>
+                            <div class="hint_text text-center">陰德值超過3000才可選購</div>
+                        </div>
+                        <div class="color">
+                            <h5>顏色</h5>
+                            <div class="btns d-flex flex-wrap">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/jquery-3.6.0.js"></script>
+        <script>
+        </script>
+    </body>
+</html>
