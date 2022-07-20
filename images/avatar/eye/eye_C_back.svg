@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.38 40.87">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="front-hair">
+    <ellipse class="cls-1" cx="18.54" cy="28.48" rx="7.56" ry="9.66" transform="translate(-9.89 9.86) rotate(-23.71)"/>
+    <ellipse class="cls-1" cx="44.86" cy="28.48" rx="9.66" ry="7.56" transform="translate(0.74 58.1) rotate(-66.29)"/>
+  </g>
+</svg>

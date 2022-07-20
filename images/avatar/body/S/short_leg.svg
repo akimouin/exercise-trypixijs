@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="legs">
+    <g>
+      <path id="l-_" data-name="l-Ｓ" class="cls-1" d="M102.63,0l26.79,16.89c-4.9,3.93-20,29.38-23.24,36.36L84.61,41.69,78,37.49Z"/>
+      <path id="_" data-name="Ｓ" class="cls-1" d="M157.37,0,130.58,16.89c4.9,3.93,20,29.38,23.24,36.36l21.57-11.56,6.64-4.2Z"/>
+    </g>
+  </g>
+</svg>

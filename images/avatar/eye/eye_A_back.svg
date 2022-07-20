@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.38 40.87">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="front-hair">
+    <circle class="cls-1" cx="45.99" cy="28.02" r="9.58" transform="matrix(0.03, -1, 1, 0.03, 16.42, 73.03)"/>
+    <circle class="cls-1" cx="17.29" cy="28.05" r="9.58" transform="translate(-11.33 44.38) rotate(-88.05)"/>
+  </g>
+</svg>

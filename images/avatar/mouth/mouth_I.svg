@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.14 12.63">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ff7fce;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="front-hair">
+    <path class="cls-1" d="M6.4,5.33a15.36,15.36,0,0,0,7.52-2.54s3.59,2.81,7.66,2.54"/>
+  </g>
+</svg>

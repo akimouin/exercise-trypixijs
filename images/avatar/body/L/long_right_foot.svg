@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="foot-position">
+    <path id="l-L" class="cls-1" d="M12.57,17.54H41.43a8.85,8.85,0,0,1,8.85,8.85V37.66a8.85,8.85,0,0,1-8.85,8.85H18.14A17.27,17.27,0,0,1,.87,29.24v0a11.7,11.7,0,0,1,11.7-11.7Z" transform="translate(57.83 57.31) rotate(166.72)"/>
+  </g>
+</svg>

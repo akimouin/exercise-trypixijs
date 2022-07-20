@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.38 40.87">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="eye-front">
+    <g>
+      <path class="cls-1" d="M44.59,29.92s3.67-.13,4.77-2.32c0,3.38-4,4.88-4,4.88Z"/>
+      <path class="cls-1" d="M17.78,29.92S14.12,29.79,13,27.6c0,3.38,4,4.88,4,4.88Z"/>
+      <ellipse class="cls-1" cx="18.62" cy="32.82" rx="3.21" ry="3.66"/>
+      <ellipse class="cls-1" cx="43.76" cy="32.82" rx="3.21" ry="3.66"/>
+    </g>
+  </g>
+</svg>
