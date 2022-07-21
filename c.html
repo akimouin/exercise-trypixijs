@@ -12,25 +12,30 @@
             integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <style>
-            body{
+            body {
                 height: 100vh;
-                background-color: #3C3B67;
+                background-color: #3c3b67;
                 color: white;
             }
             nav {
                 height: 120px;
-                
             }
-            .avatar_generator{
+            .avatar_generator {
                 width: 1200px;
                 height: 610px;
                 background-color: rgba(0, 0, 0, 0.7);
                 border-radius: 16px;
                 position: relative;
             }
-            .basic_part{
+            .basic_part {
                 width: 375px;
                 height: 100%;
                 flex: 0 0 auto;
@@ -38,13 +43,13 @@
                 padding-right: 0;
                 padding-top: 110px;
             }
-            .center_part{
+            .center_part {
                 width: 450px;
                 height: 100%;
                 flex: 0 0 auto;
                 padding: 50px 0 0 0;
             }
-            .body_part{
+            .body_part {
                 width: 375px;
                 height: 100%;
                 flex: 0 0 auto;
@@ -52,7 +57,7 @@
                 padding-right: 40px;
                 padding-top: 70px;
             }
-            .btns{
+            .btns {
                 padding-top: 5px;
             }
             .circle {
@@ -66,7 +71,7 @@
             .styling i {
                 font-size: 50px;
             }
-            .line{
+            .line {
                 background-color: #fff;
                 position: absolute;
             }
@@ -86,7 +91,7 @@
                 transform: translateX(-340px) translateY(215px);
             }
 
-            .info div{
+            .info div {
                 color: #fff;
                 background-color: transparent;
                 border: #fff 1px solid;
@@ -95,32 +100,32 @@
                 margin-left: 20px;
             }
 
-            .styling{
+            .styling {
                 height: 180px;
             }
-            .hint_text{
+            .hint_text {
                 padding-top: 20px;
-                color: #FF52BA;
+                color: #ff52ba;
             }
-            .color .circle{
+            .color .circle {
                 width: 40px;
                 height: 40px;
                 margin-bottom: 10px;
                 margin-left: 10px;
                 margin-right: 10px;
             }
-            .size_btn{
+            .size_btn {
                 height: 20px;
                 width: 90px;
-                border: 1px solid #D259DD;
+                border: 1px solid #d259dd;
             }
-            .active{
-                background-color: #FFE9F6;
+            .active {
+                background-color: #ffe9f6;
             }
-            .basic_contorl{
+            .basic_contorl {
                 padding-bottom: 30px;
             }
-            .avatar_title{
+            .avatar_title {
                 padding-top: 50px;
                 padding-left: 60px;
                 position: absolute;
@@ -133,22 +138,22 @@
                 margin: 0;
                 vertical-align: bottom;
             }
-            .back{
+            .back {
                 width: 50px;
                 position: absolute;
                 left: 1145px;
                 top: 10px;
             }
-            .back i{
+            .back i {
                 font-size: 40px;
             }
-            .pic{
+            .pic {
                 position: relative;
                 width: 450px;
                 height: 450px;
                 /* background-image: url(./images/avatar/all_circle.png); */
             }
-            .body{
+            .body {
                 position: absolute;
                 top: 36%;
                 left: 28%;
@@ -158,10 +163,10 @@
                 mask-image: url(./images/avatar/body/M/body.svg);
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
-                -webkit-mask-size:cover;
+                -webkit-mask-size: cover;
                 background-image: linear-gradient(#ccf, #ccf);
             }
-            .arm{
+            .arm {
                 position: absolute;
                 top: 23.5%;
                 left: 0.5%;
@@ -174,7 +179,7 @@
                 -webkit-mask-size: cover;
                 background-image: linear-gradient(#ccf, #ccf);
             }
-            .handL{
+            .handL {
                 position: absolute;
                 top: 12%;
                 left: 5%;
@@ -185,9 +190,9 @@
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
                 -webkit-mask-size: cover;
-                background-image: linear-gradient(#fcc, #fcc);
+                background-image: linear-gradient(#ccf, #ccf);
             }
-            .handR{
+            .handR {
                 position: absolute;
                 top: 12%;
                 left: 72%;
@@ -198,9 +203,9 @@
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
                 -webkit-mask-size: cover;
-                background-image: linear-gradient(#fcc, #fcc);
+                background-image: linear-gradient(#ccf, #ccf);
             }
-            .leg{
+            .leg {
                 position: absolute;
                 top: 54.5%;
                 left: 1%;
@@ -213,10 +218,10 @@
                 -webkit-mask-size: cover;
                 background-image: linear-gradient(#ccf, #ccf);
             }
-            .footR{
+            .footR {
                 position: absolute;
                 top: 67%;
-                left: 62.5%;
+                left: 62.8%;
                 width: 170px;
                 height: 95px;
                 -webkit-mask-image: url(./images/avatar/body/M/middle_right_foot.svg);
@@ -224,12 +229,12 @@
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
                 -webkit-mask-size: cover;
-                background-image: linear-gradient(#333, #fff);
+                background-image: linear-gradient(#ccf, #ccf);
             }
-            .footL{
+            .footL {
                 position: absolute;
                 top: 67%;
-                left: 1.4%;
+                left: 1.24%;
                 width: 170px;
                 height: 95px;
                 -webkit-mask-image: url(./images/avatar/body/M/middle_left_foot.svg);
@@ -237,9 +242,9 @@
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
                 -webkit-mask-size: cover;
-                background-image: linear-gradient(#fcc, #fcc);
+                background-image: linear-gradient(#ccf, #ccf);
             }
-            .face{
+            .face {
                 position: absolute;
                 top: 13.5%;
                 left: 37.5%;
@@ -252,33 +257,33 @@
                 -webkit-mask-size: cover;
                 background-image: linear-gradient(#ccf, #ccf);
             }
-            .eyef{
+            .eyef {
                 position: absolute;
                 top: 14%;
                 left: 37%;
                 width: 120px;
                 height: 80px;
-                -webkit-mask-image: url(./images/avatar/eye/eye_B_front.svg);
+                -webkit-mask-image: url(./images/avatar/eye/eye_A_front.svg);
                 mask-image: url(./images/avatar/body/M/arm.svg);
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
                 -webkit-mask-size: cover;
                 background-image: linear-gradient(#333, #333);
             }
-            .eyeb{
+            .eyeb {
                 position: absolute;
                 top: 14%;
                 left: 37%;
                 width: 120px;
                 height: 80px;
-                -webkit-mask-image: url(./images/avatar/eye/eye_B_back.svg);
+                -webkit-mask-image: url(./images/avatar/eye/eye_A_back.svg);
                 mask-image: url(./images/avatar/body/M/arm.svg);
                 -webkit-mask-repeat: no-repeat;
                 mask-repeat: no-repeat;
                 -webkit-mask-size: cover;
                 background-image: linear-gradient(#fff, #fff);
             }
-            .hairf{
+            .hairf {
                 position: absolute;
                 top: 1%;
                 left: 19%;
@@ -291,9 +296,9 @@
                 -webkit-mask-size: cover;
                 background-image: linear-gradient(#caa, #caa);
             }
-            .nose{
+            .nose {
                 position: absolute;
-                top: 26%;
+                top: 25.5%;
                 left: 47%;
                 width: 32px;
                 height: 32px;
@@ -304,19 +309,58 @@
                 -webkit-mask-size: cover;
                 background-image: linear-gradient(#f00, #caa);
             }
-            .mouth{
+            .mouth {
                 position: absolute;
-                top: 31.5%;
-                left: 47.2%;
+                top: 32%;
+                left: 47.25%;
                 width: 32px;
                 height: 15px;
                 background-image: url(./images/avatar/mouth/mouth_A.svg);
-                /* -webkit-mask-image: url(./images/avatar/mouth/mouth_A.svg);
-                mask-image: url(./images/avatar/body/M/arm.svg);
-                -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
-                -webkit-mask-size: cover;
-                background-image: linear-gradient(#caa, #caa); */
+            }
+            .handControlR {
+                position: absolute;
+                border: #ffe9f6 5px dotted;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                top: 18%;
+                left: 68%;
+            }
+            .handControlL {
+                position: absolute;
+                border: #ffe9f6 5px dotted;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                top: 18%;
+                left: 10%;
+            }
+            .faceControl {
+                position: absolute;
+                border: #ffc 5px dotted;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                top: 5%;
+                left: 34%;
+            }
+            .footControlL {
+                position: absolute;
+                border: #fcf 5px dotted;
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                top: 67%;
+                left: 15%;
+            }
+            .footControlR {
+                position: absolute;
+                border: #fcf 5px dotted;
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                top: 67%;
+                left: 60%;
             }
         </style>
     </head>
@@ -324,12 +368,19 @@
         <nav><h1>navbar</h1></nav>
         <div class="container-fluid"
             ><div class="row avatar_generator m-auto">
-                <div class="title avatar_title d-flex flex-wrap align-items-end"><h2>投生形象1</h2><p class="created_time">建立時間：20220616/Thr/08:12:23</p></div>
+                <div class="title avatar_title d-flex flex-wrap align-items-end"
+                    ><h2>投生形象1</h2
+                    ><p class="created_time"
+                        >建立時間：20220616/Thr/08:12:23</p
+                    ></div
+                >
                 <div class="back"><i class="fa-solid fa-xmark"></i></div>
                 <div class="basic_part">
                     <div class="basic_contorl">
                         <h4>體型</h4>
-                        <div class="btns d-flex flex-wrap justify-content-center">
+                        <div
+                            class="btns d-flex flex-wrap justify-content-center"
+                        >
                             <div class="size_btn active"></div>
                             <div class="size_btn"></div>
                             <div class="size_btn"></div>
@@ -337,7 +388,9 @@
                     </div>
                     <div class="basic_contorl">
                         <h4>手臂</h4>
-                        <div class="btns d-flex flex-wrap justify-content-center">
+                        <div
+                            class="btns d-flex flex-wrap justify-content-center"
+                        >
                             <div class="size_btn active"></div>
                             <div class="size_btn"></div>
                             <div class="size_btn"></div>
@@ -345,7 +398,9 @@
                     </div>
                     <div class="basic_contorl">
                         <h4>腿</h4>
-                        <div class="btns d-flex flex-wrap justify-content-center">
+                        <div
+                            class="btns d-flex flex-wrap justify-content-center"
+                        >
                             <div class="size_btn active"></div>
                             <div class="size_btn"></div>
                             <div class="size_btn"></div>
@@ -376,9 +431,30 @@
                         <div class="nose"></div>
                         <div class="mouth"></div>
                         <div class="hairf"></div>
+                        <div
+                            class="faceControl"
+                            onclick="clickevent()"
+                        ></div>
+                        <div
+                            class="handControlR"
+                            onclick="clickevent()"
+                        ></div>
+                        <div
+                            class="handControlL"
+                            onclick="clickevent()"
+                        ></div>
+                        <div
+                            class="footControlL"
+                            onclick="clickevent()"
+                        ></div>
+                        <div
+                            class="footControlR"
+                            onclick="clickevent()"
+                        ></div>
                     </div>
                     <div class="info d-flex justify-content-center">
-                        <div><i class="fa-solid fa-floppy-disk"></i> 儲存</div> <div><i class="fa-solid fa-dice"></i> 隨機</div>
+                        <div><i class="fa-solid fa-floppy-disk"></i> 儲存</div>
+                        <div><i class="fa-solid fa-dice"></i> 隨機</div>
                     </div>
                 </div>
                 <div class="body_part">
@@ -390,13 +466,18 @@
                         <div class="styling">
                             <h5>款式</h5>
                             <div class="btns d-flex justify-content-center">
-                                <div><i class="fa-solid fa-angle-left"></i></div>
+                                <div
+                                    ><i class="fa-solid fa-angle-left"></i
+                                ></div>
                                 <div class="circle"></div>
-                                <div><i class="fa-solid fa-angle-right"></i></div>
-                                
+                                <div
+                                    ><i class="fa-solid fa-angle-right"></i
+                                ></div>
                             </div>
                             <div class="text-center">300</div>
-                            <div class="hint_text text-center">陰德值超過3000才可選購</div>
+                            <div class="hint_text text-center"
+                                >陰德值超過3000才可選購</div
+                            >
                         </div>
                         <div class="color">
                             <h5>顏色</h5>
@@ -417,6 +498,9 @@
         </div>
         <script src="./js/jquery-3.6.0.js"></script>
         <script>
+            const clickevent = () => {
+                console.log('aaa');
+            };
         </script>
     </body>
 </html>
